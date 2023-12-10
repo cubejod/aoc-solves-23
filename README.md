@@ -1,1 +1,1 @@
-To fix: day 1, day 5 (incomplete)
+To fix: day 10 p2 without cheating
