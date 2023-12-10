@@ -3,8 +3,27 @@ import re
 with open("day1input.txt") as f:
     data=f.readlines()
 output=0
+output2=0
 ints=["1","2","3","4","5","6","7","8","9","0"]
 things=["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
+for i in range(len(data)):
+    first=""
+    last=""
+    for j in range(len(data[i])):
+        if data[i][j].isdigit():
+            first=data[i][j]
+            break
+    for j in range(len(data[i])-1,-1,-1):
+        if data[i][j].isdigit():
+            last=data[i][j]
+            break
+    output+=int(first+last)
+
+
+
+
+
 for i in range(len(data)):
     findex=999999
     lindex=0
@@ -63,5 +82,6 @@ for i in range(len(data)):
                 break
     if useTemp2==True:
         temp+=str(last)
-    output+=int(temp)
+    output2+=int(temp)
 print(output)
+print(output2)
