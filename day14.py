@@ -2,6 +2,7 @@ import copy
 with open("day14input.txt") as f:
     data=f.readlines()
     data = [l.rstrip() for l in data]
+    
 for i in range(len(data)):
     data[i]=list(data[i])
 def north(data):
@@ -75,7 +76,6 @@ for i in range(10000):
     else:
         storage.append(copy.deepcopy(data))
 output2=0
-
 mod=(1000000000-(a+1))%b
 for i in range(mod):
     north(data)
@@ -87,5 +87,4 @@ for i in range(len(data)):
     for j in range(len(data[i])):
         if data[i][j]=="O":
             output2+=len(data)-i 
-            
 print(output2)
