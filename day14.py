@@ -87,4 +87,5 @@ for i in range(len(data)):
     for j in range(len(data[i])):
         if data[i][j]=="O":
             output2+=len(data)-i 
+            
 print(output2)
