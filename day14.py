@@ -75,7 +75,6 @@ for i in range(10000):
     else:
         storage.append(copy.deepcopy(data))
 output2=0
-
 mod=(1000000000-(a+1))%b
 for i in range(mod):
     north(data)
